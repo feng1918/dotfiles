@@ -51,7 +51,6 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
 " Use Vundle plugin to manage all other plugins
@@ -59,19 +58,40 @@ if filereadable(expand("~/.vim/plugins.vim"))
     source ~/.vim/plugins.vim
 endif
 
-" ================ lightline plugin ==================
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ }
-set noshowmode
+" =============== Basic KeyMapping ===============
+" ,q to toggle quickfix window (where you have stuff like Ag)
+" ,oq to open it back up (rare)
+nmap <silent> ,qc :cclose<CR>
+nmap <silent> ,qo :copen<CR>
 
-" ================ NERDTreeToggle plugin ==================
-map <C-o> :NERDTreeToggle<CR>
+"Move back and forth through previous and next buffers
+"with ,z and ,x
+nnoremap <silent> ,z :bp<CR>
+nnoremap <silent> ,x :bn<CR>
+
+" Zoom in
+map <silent> ,gz <C-w>o
+
+" Create window splits easier. The default
+" way is Ctrl-w,v and Ctrl-w,s. I remap
+" this to vv and ss
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+
+" Type ,hl to toggle highlighting on/off, and show current value.
+noremap ,hl :set hlsearch! hlsearch?<CR>
+
+" F1 for paste, F2 for copy
+nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+map <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nmap <F2> :.w !pbcopy<CR><CR>
+vmap <F2> :w !pbcopy<CR><CR>
+
+
+" =============== Load plugin Settings ========================
+so ~/.vim/settings.vim
 
 " for python3.7 issue
 if has('python3')
-  silent! python3 1
+    silent! python3 1
 endif
-
-" ================ fzf plugin ==================
-map ; :Files<CR>
