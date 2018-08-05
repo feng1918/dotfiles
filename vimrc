@@ -15,9 +15,6 @@ set laststatus=2
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-"turn on syntax highlighting
-syntax on
-
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
@@ -56,6 +53,7 @@ set sidescroll=1
 " Use Vundle plugin to manage all other plugins
 if filereadable(expand("~/.vim/plugins.vim"))
     source ~/.vim/plugins.vim
+    source ~/.vim/settings.vim
 endif
 
 " =============== Basic KeyMapping ===============
@@ -86,10 +84,6 @@ nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 map <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <F2> :.w !pbcopy<CR><CR>
 vmap <F2> :w !pbcopy<CR><CR>
-
-
-" =============== Load plugin Settings ========================
-so ~/.vim/settings.vim
 
 " for python3.7 issue
 if has('python3')

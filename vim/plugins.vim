@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -14,9 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " Plugin on Git
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
 
 " Plugin on vim
 Plugin 'itchyny/lightline.vim'
+Plugin 'altercation/solarized'
+Plugin 'lifepillar/vim-solarized8'
 
 " Plugin on files and project
 Plugin 'junegunn/fzf'

@@ -4,4 +4,5 @@
 " let NERDTreeDirArrows = 1
 " let g:NERDTreeWinSize = 30
 
-map <C-o> :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>nf :NERDTreeFind<CR>
