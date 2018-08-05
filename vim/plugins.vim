@@ -37,12 +37,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
 
 " Plugin on Programming
-" Dynamic completions for HTML, CSS and JavaScript
-" From https://github.com/mattn/emmet-vim
 Plugin 'mattn/emmet-vim'
-
-" Code analysis
-" https://github.com/w0rp/ale
+Plugin 'dyng/ctrlsf.vim'
 Plugin 'w0rp/ale'
 
 call vundle#end()
