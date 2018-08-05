@@ -10,9 +10,17 @@ set background=dark     " Setting dark mode
 colorscheme solarized8
 
 let g:lightline = {
-    \ 'active': {
-    \   'right': [ [ 'lineinfo' ],
-    \              [ 'percent' ] ]
-    \ },
-    \ 'colorscheme': 'solarized',
-    \ }
+  \ 'component_function': {
+  \   'filename': 'LightLineFilename'
+  \ },
+  \ 'colorscheme': 'solarized',
+  \ }
+
+function! LightLineFilename()
+  let name = expand('%')
+  if len(name) > 80
+    let subs = split(expand('%'), "/")
+    let name = '.../' . subs[-3] . '/' . subs[-2] . '/' . subs[-1]
+  endif
+  return name
+endfunction
