@@ -8,6 +8,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 " set visualbell                  "No sounds,
 set autoread                    "Reload files changed outside vim
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set laststatus=2
 
 " This makes vim act like all other editors, buffers can
@@ -47,6 +48,13 @@ set nofoldenable        "dont fold by default
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
+
+" ================ Search ===========================
+
+set incsearch       " Find the next match as we type the search
+set hlsearch        " Highlight searches by default
+set ignorecase      " Ignore case when searching...
+set smartcase       " ...unless we type a capital
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
