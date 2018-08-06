@@ -39,6 +39,8 @@ Plugin 'easymotion/vim-easymotion'
 " Plugin on Programming
 Plugin 'mattn/emmet-vim'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 
 call vundle#end()

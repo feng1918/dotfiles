@@ -5,4 +5,4 @@
 " let g:NERDTreeWinSize = 30
 
 nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>nf :NERDTreeFind<CR>
+nnoremap <silent><leader>1 :NERDTreeFind<CR>
