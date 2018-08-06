@@ -42,6 +42,10 @@ Plugin 'dyng/ctrlsf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'valloric/youcompleteme'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 filetype plugin indent on
