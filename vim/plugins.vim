@@ -21,6 +21,7 @@ Plugin 'tpope/vim-git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/solarized'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'morhetz/gruvbox'
 
 " Plugin on files and project
 Plugin 'junegunn/fzf'

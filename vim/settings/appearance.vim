@@ -7,13 +7,15 @@ if has("termguicolors")
 endif
 
 set background=dark     " Setting dark mode
-colorscheme solarized8
+colorscheme gruvbox
+
+let g:gruvbox_contrast_dark = 'soft'
 
 let g:lightline = {
   \ 'component_function': {
   \   'filename': 'LightLineFilename'
   \ },
-  \ 'colorscheme': 'solarized',
+  \ 'colorscheme': 'gruvbox',
   \ }
 
 function! LightLineFilename()
