@@ -11,19 +11,19 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.[ch]]
+[*.ch]
 indent_size = 2
 indent_style = space
 insert_final_newline = true
 max_line_length = 100
 tab_width = 2
 
-[*.{py,json}]
+[*.py]
 indent_size = 4
 tab_size = 4
 indent_style = space
 
-[*.{js,vim,css,ui,xml,xml.in}]
+[*.{js,json,vim,css,ui,xml,xml.in}]
 indent_size = 2
 tab_size = 2
 indent_style = space

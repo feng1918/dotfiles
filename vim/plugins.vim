@@ -47,6 +47,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'valloric/youcompleteme'
 Plugin 'ervandew/supertab'
+Plugin 'shmup/vim-sql-syntax'  "sql syntax highlight
 
 call vundle#end()
 filetype plugin indent on

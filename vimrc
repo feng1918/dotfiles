@@ -92,6 +92,11 @@ nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 map <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <F2> :.w !pbcopy<CR><CR>
 vmap <F2> :w !pbcopy<CR><CR>
+map <leader>cp :%w !pbcopy<CR><CR>
+
+" open/close the location list
+nnoremap <silent> lo :lopen<CR>
+nnoremap <silent> lc :lclose<CR>
 
 " for python3.7 issue
 if has('python3')
