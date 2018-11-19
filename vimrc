@@ -67,8 +67,13 @@ endif
 " =============== Basic KeyMapping ===============
 " ,q to toggle quickfix window (where you have stuff like Ag)
 " ,oq to open it back up (rare)
-nmap <silent> ,qc :cclose<CR>
-nmap <silent> ,qo :copen<CR>
+" open/close quickfix window
+nmap <silent> qc :cclose<CR>
+nmap <silent> qo :copen<CR>
+
+" open/close location window
+nnoremap <silent> lo :lopen<CR>
+nnoremap <silent> lc :lclose<CR>
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
@@ -93,12 +98,3 @@ map <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <F2> :.w !pbcopy<CR><CR>
 vmap <F2> :w !pbcopy<CR><CR>
 map <leader>cp :%w !pbcopy<CR><CR>
-
-" open/close the location list
-nnoremap <silent> lo :lopen<CR>
-nnoremap <silent> lc :lclose<CR>
-
-" for python3.7 issue
-if has('python3')
-    silent! python3 1
-endif
