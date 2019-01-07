@@ -1,1 +1,1 @@
-prompt skwp_simplified
+prompt skwp

@@ -10,6 +10,7 @@ set gcr=a:blinkon0              "Disable cursor blink
 set autoread                    "Reload files changed outside vim
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set laststatus=2
+set noeb vb t_vb=
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.

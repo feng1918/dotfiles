@@ -1,6 +1,6 @@
 [alias]
-  #lg1=log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-  #lg2=log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n''%C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
+  # lg1=log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+  # lg2=log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n''%C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
   lg = !"git lg1"
   lg1 = !"git lg1-specific --all"
   lg2 = !"git lg2-specific --all"
@@ -16,29 +16,22 @@
   # clean merged branches
   bc = "!git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d"
 
-
 [core]
-  repositoryformatversion = 0
-  filemode = true
-  bare = false
-  logallrefupdates = true
-  ignorecase = true
-  precomposeunicode = true
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = "diff-so-fancy | less --tabs=4 -RFX"
 
 [color "diff"]
   meta = yellow
-  frag = magenta bold
-  commit = yellow bold
-  old = red bold
-  new = green bold
+  frag = "magenta bold"
+  commit = "yellow bold"
+  old = "red bold"
+  new = "green bold"
   whitespace = red reverse
 [color "diff-highlist"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlist = green bold 22
+  oldNormal = "red bold"
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlist = "green bold 22"
 [user]
-	name = Feng Luan
-    email = feng.luan@sesam.no
+  name = Feng Luan
+  email = "feng.luan@hafslund.no"
 
