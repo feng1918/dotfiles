@@ -14,7 +14,7 @@ root: ~/Github/Hafslundnett
 # Run on project start, the first time
 # on_project_first_start: ssh-add -A
 # Run on project start, after the first time
-on_project_start: eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa
+on_project_start: ssh-add ~/.ssh/id_rsa
 # on_project_restart: command
 # Run on project exit ( detaching from tmux session )
 on_project_exit: ssh-add -D
@@ -50,13 +50,19 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - git pull --rebase
+        - main:
+          - cd node
+          - git pull --rebase --prune; git bc
+        - test:
   - gml-config:
       root: ~/Github/Hafslundnett/ams-hafslund-sesam-config
       panes:
-        - git pull --rebase
+        - main:
+          - git pull --rebase --prune; git bc
   - support-tools:
       root: ~/Github/Hafslundnett/sesam-support-utilities
       layout: main-vertical
       panes:
-        - git pull --rebase
+        - main:
+          - git pull --rebase --prune; git bc
+        - test:
