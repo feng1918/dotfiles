@@ -66,3 +66,9 @@ windows:
         - main:
           - git pull --rebase --prune; git bc
         - test:
+  - remote:
+     layout: main-vertical
+     panes:
+       - remote:
+         - ssh prod
+       - local:
