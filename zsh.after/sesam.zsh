@@ -12,3 +12,5 @@ alias curlPNode='curl -H "Authorization: Bearer $AMSProdNode_JWT" -H "Accept: ap
 alias curlSNode='curl -H "Authorization: Bearer $AMSStagingNode_JWT" -H "Accept: application/json"'
 alias curlTNode='curl -H "Authorization: Bearer $AMSTestNode_JWT" -H "Accept: application/json"'
 alias curlFeng='curl -H "Authorization: Bearer $NodeFeng_JWT" -H "Accept: application/json"'
+
+export PATH=$PATH:~/Github/Hafslundnett/sesam-support-utilities/bash

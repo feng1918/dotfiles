@@ -2,6 +2,34 @@ snippet add
 ["add", "${1:key}", "${2:value}"],
 endsnippet
 
+snippet hops "Insert first-hops"
+["first",
+  ["hops", {
+    "datasets": ["${1:dataset} ${2:alias_id}"],
+    "where": ["eq",
+       "${3:condition}"
+    ],
+    "return": "$2."
+    "track-dependencies": "$ENV(dependency)"
+  }]
+],
+endsnippet
+
+snippet apply-hops "Insert apply-hops"
+["apply-hops", "${1:rule}", {
+  "datasets": ["${2:dataset} ${3:alias_id}"],
+  "where": ["eq",
+     "${4:condition}"
+  ],
+  "return": "$3."
+  "track-dependencies": "$ENV(dependency)"
+}],
+endsnippet
+
+snippet remove
+["remove", "tmp_*"]
+endsnippet
+
 snippet identifiedobject "IdentifiedObject"
 ["add", "cim:IdentifiedObject.aliasName", null],
 ["add", "cim:IdentifiedObject.description", null],
@@ -34,3 +62,41 @@ snippet equipmentcontainer "EquipmentContainer"
 ["add", "cim:EquipmentContainer.WeatherStation", null],
 endsnippet
 
+snippet assetinfo "AssetInfo"
+["add", "cim:AssetInfo.CatalogAssetType", null],
+["add", "cim:AssetInfo.PoserSystemResources", null],
+["add", "cim:AssetInfo.ProductAssetModel", null],
+endsnippet
+
+snippet equipment "Equipment"
+["add", "cim:Equipment.AdditionalEquipmentContainer", null],
+["add", "cim:Equipment.EquipmentContainer", null],
+["add", "cim:Equipment.OperationalLimitSet", null],
+["add", "cim:Equipment.aggregate", null],
+["add", "cim:Equipment.inService", null],
+["add", "cim:Equipment.networkAnalysisEnabled", null],
+["add", "cim:Equipment.normallyInService", null],
+["add", "nek:NEKEquipment.isModelCompensation", null],
+endsnippet
+
+snippet switch "Switch"
+["add", "cim:Switch.normalOpen", null],
+["add", "cim:Switch.Open", null],
+["add", "cim:Switch.ratedCurrent", null],
+["add", "cim:Switch.switchOnCount", null],
+["add", "cim:Switch.switchOnDate", null],
+["add", "cim:Switch.switchOnDate", null],
+endsnippet
+
+snippet conductingEquipment "ConductingEquipment"
+["add", "cim:ConductingEquipment.BaseVoltage", null],
+["add", "cim:ConductingEquipment.ProtectionEquipments", null],
+["add", "cim:ConductingEquipment.SvStatus", null],
+["add", "cim:ConductingEquipment.Terminals", null],
+endsnippet
+
+snippet protectedSwitch "ProtectedSwitch"
+["add", "cim:ProtectedSwitch.breakingCapacity", null],
+["add", "cim:ProtectedSwitch.OperatedByProtectionEquipment.", null],
+["add", "msite:MSITEProtectedSwitch.remoteControlled", null],
+endsnippet
